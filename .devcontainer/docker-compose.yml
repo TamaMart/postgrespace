@@ -33,9 +33,6 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: postgres@sql.dev
       PGADMIN_DEFAULT_PASSWORD: 1234
-      # Modo escritorio: pgAdmin no pide login (lab de un solo usuario local).
-      PGADMIN_CONFIG_SERVER_MODE: "False"
-      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
       # pgAdmin corre detras del proxy de Codespaces, que TERMINA el TLS y le
       # reenvia por HTTP. Sin esto pgAdmin cree que la peticion es HTTP, genera
       # mal la cookie de sesion/URLs y las XHR autenticadas (preferences/get_all,
